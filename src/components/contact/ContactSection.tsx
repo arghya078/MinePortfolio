@@ -23,7 +23,7 @@ const cardVariant = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5 }, 
   },
 };
 
@@ -117,14 +117,13 @@ const ContactSection = () => {
           {contactInfo.map((item, index) => (
             <motion.a
               key={index}
-              variants={cardVariant}   // ✅ FIXED HERE
+              variants={cardVariant}
               whileHover={{ y: -6, scale: 1.02 }}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden"
             >
-              {/* Glow hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
                 <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 blur-xl" />
               </div>

@@ -80,6 +80,9 @@ const AboutSection = () => {
                   "Built multiple full-stack applications as part of the curriculum",
                   "Worked with REST APIs, authentication, state management, and deployment",
                   "Collaborated on team projects simulating real-world development workflows",
+                  "Also learned version control with Git and GitHub, and agile methodologies",
+                  "Gained experience with modern tools like VS Code, Postman",
+                  "Also worked on Next.js and TypeScript",
                 ]}
               />
             </div>

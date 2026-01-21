@@ -2,7 +2,7 @@
 
 import Header from "@/components/general/Header";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 import {
   FaHtml5,
@@ -31,7 +31,9 @@ import {
 
 import { TbApi } from "react-icons/tb";
 
-const container = {
+
+
+const container: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -40,13 +42,15 @@ const container = {
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: {
+      duration: 0.4, 
+    },
   },
 };
 

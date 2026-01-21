@@ -7,10 +7,13 @@ import LinkButton from "../../general/LinkButton";
 import { LuArrowBigRight } from "react-icons/lu";
 import Particles from "./Particles";
 import { FaGithub } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-// Animation variants
-const container = {
+// =========================
+// Properly typed variants
+// =========================
+
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -21,25 +24,28 @@ const container = {
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: {
+      duration: 0.6,
+    },
   },
 };
 
-const float = {
+const float: Variants = {
   animate: {
     y: [0, -8, 0],
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut",
     },
   },
 };
+
+
 
 const HeroSection = () => {
   return (
@@ -79,19 +85,21 @@ const HeroSection = () => {
           {/* Avatar */}
           <motion.div
             variants={item}
-            {...float}
+            animate="animate"
             className="relative w-44 h-44 sm:w-52 sm:h-52"
           >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 animate-spin-slow blur-md opacity-80" />
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-zinc-950">
-              <Image
-                src="/images/image.png"
-                alt="Profile"
-                fill
-                priority
-                className="object-cover"
-              />
-            </div>
+            <motion.div variants={float} animate="animate" className="relative w-full h-full">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 animate-spin-slow blur-md opacity-80" />
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-zinc-950">
+                <Image
+                  src="/images/image.png"
+                  alt="Profile"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Text */}
