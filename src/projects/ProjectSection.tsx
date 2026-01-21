@@ -42,12 +42,12 @@ const ProjectSection = () => {
 
           <div className="w-full sm:w-auto lg:w-[320px]">
             <ProjectCard
-              image="/projects/project3.png"
-              title="E-commerce Store"
-              description="A responsive e-commerce UI with cart, filtering and product pages."
-              techStack={["React", "Redux", "Tailwind"]}
-              liveDemoLink="https://your-site.com"
-              sourceCodeLink="https://github.com/yourusername/ecommerce"
+              image="/images/p5.png"
+              title="SnapCart | 10 min Delivery E-commerce"
+              description="A full-stack grocery delivery platform built with Next.js, MongoDB, and Socket.IO featuring real-time order tracking with live maps, role-based dashboards (User, Delivery Partner, Admin), Google OAuth authentication, Stripe payments, and an admin panel for real-time product and order management."
+              techStack={["Next.js", "MongoDB", "Socket.IO", "Tailwind", "Google OAuth", "Stripe", "REST API", "Vercel", "GitHub", "React Router", "Context API"]}
+              liveDemoLink="https://snapcart-liard.vercel.app/register"
+              sourceCodeLink="https://github.com/arghya078/SnapCart"
             />
           </div>
 
