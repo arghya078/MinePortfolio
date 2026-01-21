@@ -18,7 +18,7 @@ const container = {
   },
 };
 
-const item = {
+const cardVariant = {
   hidden: { opacity: 0, y: 25 },
   show: {
     opacity: 1,
@@ -89,7 +89,6 @@ const ContactSection = () => {
       </div>
 
       <div className="w-[90%] sm:w-[80%] mx-auto space-y-16">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -102,7 +101,8 @@ const ContactSection = () => {
             Contact Me
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Feel free to reach out for collaborations, opportunities, or just a friendly hello 👋
+            Feel free to reach out for collaborations, opportunities, or just a
+            friendly hello 👋
           </p>
         </motion.div>
 
@@ -117,7 +117,7 @@ const ContactSection = () => {
           {contactInfo.map((item, index) => (
             <motion.a
               key={index}
-              variants={item}
+              variants={cardVariant}   // ✅ FIXED HERE
               whileHover={{ y: -6, scale: 1.02 }}
               href={item.link}
               target="_blank"
